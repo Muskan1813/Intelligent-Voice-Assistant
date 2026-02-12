@@ -10,13 +10,12 @@ from datetime import datetime
 import pyautogui
 
 # self made modules below
-
 import system_commands as syscmd
 import calculator
 import notes
 import volume_control as vc
 import brightness_control as bc
-
+import whatsapp_commands as wc
 
 
 from ctypes import cast, POINTER
@@ -156,6 +155,9 @@ mappings = {
     "open_jupyter": lambda: syscmd.open_jupyter(speaker),
     "open_colab": lambda: syscmd.open_colab(speaker),
     "open_chatgpt": lambda: syscmd.open_chatgpt(speaker), 
+    
+    "send_whatsapp": lambda: wc.send_whatsapp_message(speaker, recognizer),
+    "call_whatsapp": lambda: wc.call_whatsapp_contact(speaker, recognizer),
     
     "exit": quit,
     "file":create_file
