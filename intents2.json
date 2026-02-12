@@ -208,6 +208,25 @@
   ],
   "responses": ["Okay"]
 },
+{
+  "tag": "send_whatsapp",
+  "patterns": [
+    "send whatsapp message",
+    "send message on whatsapp",
+    "text someone on whatsapp"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "call_whatsapp",
+  "patterns": [
+    "call on whatsapp",
+    "make whatsapp call",
+    "call someone on whatsapp"
+  ],
+  "responses": ["Okay"]
+},
+
 
 
       {"tag": "delete_note",

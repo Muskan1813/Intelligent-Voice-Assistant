@@ -83,49 +83,49 @@ def open_chatgpt(speaker):
     speaker.runAndWait()
 
 
-def shutdown_system(speaker, recognizer):
-    speaker.say("Are you sure you want to shut down the system? Say yes or no.")
-    speaker.runAndWait()
+# def shutdown_system(speaker, recognizer):
+#     speaker.say("Are you sure you want to shut down the system? Say yes or no.")
+#     speaker.runAndWait()
 
-    try:
-        with speech_recognition.Microphone() as source:
-            recognizer.adjust_for_ambient_noise(source, duration=0.3)
-            audio = recognizer.listen(source, timeout=5)
-            confirmation = recognizer.recognize_google(audio).lower()
+#     try:
+#         with speech_recognition.Microphone() as source:
+#             recognizer.adjust_for_ambient_noise(source, duration=0.3)
+#             audio = recognizer.listen(source, timeout=5)
+#             confirmation = recognizer.recognize_google(audio).lower()
 
-        if "yes" in confirmation:
-            speaker.say("Shutting down the system")
-            speaker.runAndWait()
-            time.sleep(1)
-            os.system("shutdown /s /t 1")
-        else:
-            speaker.say("Shutdown cancelled")
-            speaker.runAndWait()
+#         if "yes" in confirmation:
+#             speaker.say("Shutting down the system")
+#             speaker.runAndWait()
+#             time.sleep(1)
+#             os.system("shutdown /s /t 1")
+#         else:
+#             speaker.say("Shutdown cancelled")
+#             speaker.runAndWait()
 
-    except:
-        speaker.say("Shutdown cancelled")
-        speaker.runAndWait()
+#     except:
+#         speaker.say("Shutdown cancelled")
+#         speaker.runAndWait()
 
 
-def restart_system(speaker, recognizer):
-    speaker.say("Are you sure you want to restart the system? Say yes or no.")
-    speaker.runAndWait()
+# def restart_system(speaker, recognizer):
+#     speaker.say("Are you sure you want to restart the system? Say yes or no.")
+#     speaker.runAndWait()
 
-    try:
-        with speech_recognition.Microphone() as source:
-            recognizer.adjust_for_ambient_noise(source, duration=0.3)
-            audio = recognizer.listen(source, timeout=5)
-            confirmation = recognizer.recognize_google(audio).lower()
+#     try:
+#         with speech_recognition.Microphone() as source:
+#             recognizer.adjust_for_ambient_noise(source, duration=0.3)
+#             audio = recognizer.listen(source, timeout=5)
+#             confirmation = recognizer.recognize_google(audio).lower()
 
-        if "yes" in confirmation:
-            speaker.say("Restarting the system")
-            speaker.runAndWait()
-            time.sleep(1)
-            os.system("shutdown /r /t 1")
-        else:
-            speaker.say("Restart cancelled")
-            speaker.runAndWait()
+#         if "yes" in confirmation:
+#             speaker.say("Restarting the system")
+#             speaker.runAndWait()
+#             time.sleep(1)
+#             os.system("shutdown /r /t 1")
+#         else:
+#             speaker.say("Restart cancelled")
+#             speaker.runAndWait()
 
-    except:
-        speaker.say("Restart cancelled")
-        speaker.runAndWait()
+#     except:
+#         speaker.say("Restart cancelled")
+#         speaker.runAndWait()

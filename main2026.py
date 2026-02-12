@@ -14,6 +14,8 @@ import calculator
 import notes
 import volume_control as vc
 import brightness_control as bc
+import whatsapp_commands as wc
+
 
 
 
@@ -101,6 +103,8 @@ def run_assistant():
                     print(f"Command: {message}")  # Debug info
                     
                     response = assistant.request(message)
+                    # speaker.runAndWait()
+
                     # print(response)
                     
                     
@@ -108,7 +112,9 @@ def run_assistant():
                         speaker.say(response)
                         speaker.runAndWait()
                         
-                    label.config(fg="black")   
+                    # label.config(fg="black")
+                    root.after(0, lambda: label.config(fg="black"))
+   
 
             
 
@@ -146,14 +152,17 @@ mappings = {
     "open_youtube": lambda: syscmd.open_youtube(speaker),
     "open_spotify": lambda: syscmd.open_spotify(speaker),
     
-    "shutdown_system": lambda: syscmd.shutdown_system(speaker, recognizer),
-    "restart_system": lambda: syscmd.restart_system(speaker, recognizer),
+    # "shutdown_system": lambda: syscmd.shutdown_system(speaker, recognizer),
+    # "restart_system": lambda: syscmd.restart_system(speaker, recognizer),
      
     "open_word": lambda: syscmd.open_word(speaker),
     "open_notepad": lambda: syscmd.open_notepad(speaker),
     "open_jupyter": lambda: syscmd.open_jupyter(speaker),
     "open_colab": lambda: syscmd.open_colab(speaker),
     "open_chatgpt": lambda: syscmd.open_chatgpt(speaker), 
+    
+    "send_whatsapp": lambda: wc.send_whatsapp_message(speaker, recognizer),
+    "call_whatsapp": lambda: wc.call_whatsapp_contact(speaker, recognizer),
     
     "exit": quit,
     "file":create_file
