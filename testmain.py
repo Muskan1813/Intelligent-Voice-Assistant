@@ -10,10 +10,10 @@ import screen_brightness_control as sbc
 import pyautogui
 
 # self made modules below
-import system_commands as syscmd
+# import system_commands as syscmd
 import calculator
 import notes
-
+import volume_control as vc
 
 
 
@@ -53,51 +53,6 @@ def tell_date():
 def tell_time():
     time = datetime.now().strftime("%I:%M %p")
     speaker.say(f"The current time is {time}")
-    speaker.runAndWait()
-
-
-def get_volume_interface():
-    device = AudioUtilities.GetDefaultAudioEndpoint(
-        EDataFlow.eRender,
-        ERole.eMultimedia
-    )
-    interface = device.Activate(
-        IAudioEndpointVolume._iid_,
-        CLSCTX_ALL,
-        None
-    )
-    volume = cast(interface, POINTER(IAudioEndpointVolume))
-    return volume
-
-
-def increase_volume():
-    for _ in range(5):   # adjust steps if needed
-        pyautogui.press("volumeup")
-
-    speaker.say("Volume increased")
-    speaker.runAndWait()
-
-
-def decrease_volume():
-    for _ in range(5):
-        pyautogui.press("volumedown")
-
-    speaker.say("Volume decreased")
-    speaker.runAndWait()
-
-
-
-def mute_volume():
-    pyautogui.press("volumemute")
-
-    speaker.say("System muted")
-    speaker.runAndWait()
-
-
-def unmute_volume():
-    pyautogui.press("volumemute")  # toggle mute
-
-    speaker.say("System unmuted")
     speaker.runAndWait()
 
     
@@ -205,23 +160,29 @@ mappings = {
     "delete_note": lambda: notes.delete_note(speaker, recognizer),
     "add_todo": lambda: notes.add_todo(speaker, recognizer),
     "show_todos": lambda: notes.show_todo(speaker),
+    
     "tell_day": tell_day,
     "tell_date": tell_date,
     "tell_time": tell_time,
+    
     "calculate": lambda: calculator.calculate(speaker, recognizer),
-    "increase_volume": increase_volume,
-    "decrease_volume": decrease_volume,
-    "mute_volume": mute_volume,
-    "unmute_volume": unmute_volume,
+    
+    "increase_volume": lambda: vc.increase_volume(speaker),
+    "decrease_volume": lambda: vc.decrease_volume(speaker),
+    "mute_volume": lambda: vc.mute_volume(speaker),
+    "unmute_volume": lambda: vc.unmute_volume(speaker),
+    
     "increase_brightness": increase_brightness,
     "decrease_brightness": decrease_brightness,
     "set_brightness": set_brightness,  
-    "open_chrome": lambda: syscmd.open_chrome(speaker),
-    "open_vscode": lambda: syscmd.open_vscode(speaker),
-    "open_youtube": lambda: syscmd.open_youtube(speaker),
-    "open_spotify": lambda: syscmd.open_spotify(speaker),
-    "shutdown_system": lambda: syscmd.shutdown_system(speaker, recognizer),
-    "restart_system": lambda: syscmd.restart_system(speaker, recognizer),  
+    
+    # "open_chrome": lambda: syscmd.open_chrome(speaker),
+    # "open_vscode": lambda: syscmd.open_vscode(speaker),
+    # "open_youtube": lambda: syscmd.open_youtube(speaker),
+    # "open_spotify": lambda: syscmd.open_spotify(speaker),
+    
+    # "shutdown_system": lambda: syscmd.shutdown_system(speaker, recognizer),
+    # "restart_system": lambda: syscmd.restart_system(speaker, recognizer),  
     "exit": quit,
     "file":create_file
 }
