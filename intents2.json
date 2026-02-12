@@ -166,6 +166,48 @@
   ],
   "responses": ["Okay"]
 },
+{
+  "tag": "open_word",
+  "patterns": [
+    "open microsoft word",
+    "launch word document editor",
+    "start microsoft word"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "open_notepad",
+  "patterns": [
+    "open notepad",
+    "launch notepad",
+    "start text editor"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "open_jupyter",
+  "patterns": [
+    "open jupyter notebook",
+    "launch jupyter notebook",
+    "start jupyter notebook"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "open_colab",
+  "patterns": ["open google colab", "open colab", "launch colab"],
+  "responses": ["Okay"]
+},
+{
+  "tag": "open_chatgpt",
+  "patterns": [
+    "open chatgpt",
+    "open chat gpt",
+    "launch chatgpt website",
+    "start chat gpt"
+  ],
+  "responses": ["Okay"]
+},
 
 
       {"tag": "delete_note",

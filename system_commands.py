@@ -6,25 +6,39 @@ import speech_recognition
 
 def open_chrome(speaker):
     try:
-        subprocess.Popen("chrome")
+        subprocess.Popen(
+            r"C:\Program Files\Google\Chrome\Application\chrome.exe"
+        )
         speaker.say("Opening Google Chrome")
     except:
-        speaker.say("Chrome is not installed")
+        speaker.say("Chrome not found")
     speaker.runAndWait()
+
 
 
 def open_vscode(speaker):
     try:
-        subprocess.Popen("code")
+        subprocess.Popen("code", shell=True)
         speaker.say("Opening Visual Studio Code")
-    except:
-        speaker.say("VS Code is not installed or not in PATH")
+    except Exception as e:
+        print("VS Code error:", e)
+        speaker.say("Could not open Visual Studio Code")
     speaker.runAndWait()
+
 
 
 def open_youtube(speaker):
     webbrowser.open("https://www.youtube.com")
     speaker.say("Opening YouTube")
+    speaker.runAndWait()
+
+def open_word(speaker):
+    try:
+        subprocess.Popen("start winword", shell=True)
+        speaker.say("Opening Microsoft Word")
+    except Exception as e:
+        print("Word error:", e)
+        speaker.say("Could not open Microsoft Word")
     speaker.runAndWait()
 
 
@@ -34,6 +48,38 @@ def open_spotify(speaker):
         speaker.say("Opening Spotify")
     except:
         speaker.say("Spotify is not installed")
+    speaker.runAndWait()
+
+def open_notepad(speaker):
+    try:
+        subprocess.Popen("notepad")
+        speaker.say("Opening Notepad")
+    except:
+        speaker.say("Could not open Notepad")
+    speaker.runAndWait()
+    
+def open_jupyter(speaker):
+    try:
+        subprocess.Popen([
+            r"C:\Users\Er. Muskan\anaconda3\python.exe",
+            "-m",
+            "notebook"
+        ])
+        speaker.say("Opening Jupyter Notebook")
+    except Exception as e:
+        print("Jupyter error:", e)
+        speaker.say("Could not open Jupyter Notebook")
+    speaker.runAndWait()
+
+
+def open_colab(speaker):
+    webbrowser.open("https://colab.research.google.com")
+    speaker.say("Opening Google Colab")
+    speaker.runAndWait()
+
+def open_chatgpt(speaker):
+    webbrowser.open("https://chat.openai.com")
+    speaker.say("Opening ChatGPT")
     speaker.runAndWait()
 
 

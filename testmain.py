@@ -6,17 +6,16 @@ import sys
 import threading
 import tkinter as tk
 from datetime import datetime
-import screen_brightness_control as sbc
+
 import pyautogui
 
 # self made modules below
-# import system_commands as syscmd
+
+import system_commands as syscmd
 import calculator
 import notes
 import volume_control as vc
 import brightness_control as bc
-
-
 
 
 
@@ -55,6 +54,9 @@ def tell_time():
     time = datetime.now().strftime("%I:%M %p")
     speaker.say(f"The current time is {time}")
     speaker.runAndWait()
+
+
+
    
    
 def hello():    
@@ -119,6 +121,7 @@ def run_assistant():
             recognizer = speech_recognition.Recognizer() 
   
 mappings = {
+    
     "create_note": lambda: notes.create_note(speaker, recognizer),
     "delete_note": lambda: notes.delete_note(speaker, recognizer),
     "add_todo": lambda: notes.add_todo(speaker, recognizer),
@@ -135,17 +138,25 @@ mappings = {
     "mute_volume": lambda: vc.mute_volume(speaker),
     "unmute_volume": lambda: vc.unmute_volume(speaker),
     
+  
     "increase_brightness": lambda: bc.increase_brightness(speaker),
     "decrease_brightness": lambda: bc.decrease_brightness(speaker),
-    "set_brightness": lambda: bc.set_brightness(speaker, recognizer), 
+    "set_brightness": lambda: bc.set_brightness(speaker, recognizer),  
     
-    # "open_chrome": lambda: syscmd.open_chrome(speaker),
-    # "open_vscode": lambda: syscmd.open_vscode(speaker),
-    # "open_youtube": lambda: syscmd.open_youtube(speaker),
-    # "open_spotify": lambda: syscmd.open_spotify(speaker),
+    "open_chrome": lambda: syscmd.open_chrome(speaker),
+    "open_vscode": lambda: syscmd.open_vscode(speaker),
+    "open_youtube": lambda: syscmd.open_youtube(speaker),
+    "open_spotify": lambda: syscmd.open_spotify(speaker),
     
     # "shutdown_system": lambda: syscmd.shutdown_system(speaker, recognizer),
-    # "restart_system": lambda: syscmd.restart_system(speaker, recognizer),  
+    # "restart_system": lambda: syscmd.restart_system(speaker, recognizer),
+     
+    "open_word": lambda: syscmd.open_word(speaker),
+    "open_notepad": lambda: syscmd.open_notepad(speaker),
+    "open_jupyter": lambda: syscmd.open_jupyter(speaker),
+    "open_colab": lambda: syscmd.open_colab(speaker),
+    "open_chatgpt": lambda: syscmd.open_chatgpt(speaker), 
+    
     "exit": quit,
     "file":create_file
 }
