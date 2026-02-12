@@ -14,6 +14,7 @@ import pyautogui
 import calculator
 import notes
 import volume_control as vc
+import brightness_control as bc
 
 
 
@@ -54,44 +55,6 @@ def tell_time():
     time = datetime.now().strftime("%I:%M %p")
     speaker.say(f"The current time is {time}")
     speaker.runAndWait()
-
-    
-def increase_brightness():
-    current = sbc.get_brightness()[0]
-    sbc.set_brightness(min(current + 10, 100))
-
-    speaker.say("Brightness increased")
-    speaker.runAndWait()
-
-def decrease_brightness():
-    current = sbc.get_brightness()[0]
-    sbc.set_brightness(max(current - 10, 0))
-
-    speaker.say("Brightness decreased")
-    speaker.runAndWait()
-
-def set_brightness():
-    global recognizer
-
-    speaker.say("Tell me the brightness level between 0 and 100")
-    speaker.runAndWait()
-
-    try:
-        with speech_recognition.Microphone() as source:
-            recognizer.adjust_for_ambient_noise(source, duration=0.3)
-            audio = recognizer.listen(source, timeout=5)
-
-            level = recognizer.recognize_google(audio, language="en-IN")
-            level = int("".join(filter(str.isdigit, level)))
-
-        sbc.set_brightness(max(0, min(level, 100)))
-        speaker.say(f"Brightness set to {level} percent")
-        speaker.runAndWait()
-
-    except:
-        speaker.say("I could not set the brightness")
-        speaker.runAndWait()
-
    
    
 def hello():    
@@ -172,9 +135,9 @@ mappings = {
     "mute_volume": lambda: vc.mute_volume(speaker),
     "unmute_volume": lambda: vc.unmute_volume(speaker),
     
-    "increase_brightness": increase_brightness,
-    "decrease_brightness": decrease_brightness,
-    "set_brightness": set_brightness,  
+    "increase_brightness": lambda: bc.increase_brightness(speaker),
+    "decrease_brightness": lambda: bc.decrease_brightness(speaker),
+    "set_brightness": lambda: bc.set_brightness(speaker, recognizer), 
     
     # "open_chrome": lambda: syscmd.open_chrome(speaker),
     # "open_vscode": lambda: syscmd.open_vscode(speaker),
