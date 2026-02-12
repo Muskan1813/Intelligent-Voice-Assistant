@@ -1,0 +1,178 @@
+{"intents":
+[
+      {"tag": "greeting",
+        "patterns": ["Hey", "Hello", "What's up?", "How is it going?", "Hi", "Good day"],
+        "responses": ["Hello Sir!", "Hello, what can I do for you?"]},
+      {"tag": "create_note",
+        "patterns": ["Please create a new note", "New note", "Create a note", "I want to create a note"],
+        "responses": [""]},
+      {"tag": "add_todo",
+        "patterns": ["I want to add a todo", "add a new todo", "add a todo to my list", "new item on my todo list"],
+        "responses": [""]},
+      {"tag": "show_todos",
+        "patterns": ["Show my todos", "What are my todos", "What is on my todo list"],
+        "responses": [""]}, 
+      {"tag": "tell_day",
+        "patterns": [
+        "what day is today",
+        "today's day",
+        "tell me today's day",
+        "which day is it today"],
+        "responses": ["Let me check today's day"]},
+      {
+  "tag": "tell_date",
+  "patterns": [
+    "what is today's date",
+    "tell me the date",
+    "today's date",
+    "current date"
+  ],
+  "responses": [
+    "Okay"
+  ]
+},
+{
+  "tag": "tell_time",
+  "patterns": [
+    "what time is it",
+    "current time",
+    "tell me the time",
+    "what's the time now"
+  ],
+  "responses": [
+    "Okay"
+  ]
+},
+{
+  "tag": "calculate",
+  "patterns": [
+    "calculate",
+    "do a calculation",
+    "open calculator",
+    "math calculation"
+  ],
+  "responses": [
+    "Okay"
+  ]
+},
+{
+  "tag": "increase_volume",
+  "patterns": [
+    "increase volume",
+    "turn up the volume",
+    "volume up"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "decrease_volume",
+  "patterns": [
+    "decrease volume",
+    "turn down the volume",
+    "volume down"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "mute_volume",
+  "patterns": ["mute system", "mute volume"],
+  "responses": ["Okay"]
+},
+{
+  "tag": "unmute_volume",
+  "patterns": ["unmute system", "unmute volume"],
+  "responses": ["Okay"]
+},
+{
+  "tag": "increase_brightness",
+  "patterns": [
+    "increase brightness",
+    "brightness up"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "decrease_brightness",
+  "patterns": [
+    "decrease brightness",
+    "brightness down"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "set_brightness",
+  "patterns": [
+    "set brightness",
+    "adjust brightness"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "open_chrome",
+  "patterns": [
+    "open chrome",
+    "launch chrome",
+    "start chrome",
+    "open google chrome"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "open_vscode",
+  "patterns": [
+    "open vscode",
+    "open visual studio code",
+    "launch vscode",
+    "start code editor"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "open_youtube",
+  "patterns": [
+    "open youtube",
+    "launch youtube",
+    "start youtube"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "open_spotify",
+  "patterns": [
+    "open spotify",
+    "launch spotify",
+    "start spotify",
+    "play spotify"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "shutdown_system",
+  "patterns": [
+    "shutdown system",
+    "turn off computer",
+    "power off system",
+    "shutdown my computer"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "restart_system",
+  "patterns": [
+    "restart system",
+    "reboot system",
+    "restart computer",
+    "reboot computer"
+  ],
+  "responses": ["Okay"]
+},
+
+
+      {"tag": "delete_note",
+        "patterns": ["delete note", "remove note", "delete my note", "erase note", "remove my note"],
+        "responses": [ "Okay, tell me the note name"]},
+      {"tag": "exit",
+        "patterns": ["Bye", "Stop", "Quit", "I want to quit", "Goodbye", "I want to exit", "I have to go"],
+        "responses": [""]}
+]}
+  
