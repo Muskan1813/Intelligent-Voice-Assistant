@@ -64,13 +64,13 @@ done--------🔊 Volume & Brightness Control
 
 		Adjust brightness
 
-🎙️ 6️⃣ Microphone Mute Control (Meet-Friendly)
+done--------🎙️ 6️⃣ Microphone Mute Control (Meet-Friendly)
 
-“Mute microphone”
+		“Mute microphone”
 
-“Unmute mic”
+		“Unmute mic”
 
-Very practical for meetings.
+		Very practical for meetings.
 
 
 done-------- WhatsApp integration
@@ -81,14 +81,35 @@ done-------- WhatsApp integration
 
 🧠 7️⃣ Smart Small Talk
 
-“Who created you?”
+		“Who created you?”
 
-“Tell me a joke”
+		“Tell me a joke”
 
-“What can you do?”
+		“What can you do?”
 
-“How are you?”
+		“How are you?”
 
+📸 Screenshot Command
+
+		“Take screenshot”
+
+		“Take screenshot and save as report”
+
+📁 Smart File Operations
+
+		Create folder
+
+		Delete file
+
+		Move file
+
+📺 YouTube Control
+
+		Play video
+
+		Pause video
+
+		Search YouTube
 
 
 

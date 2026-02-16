@@ -209,14 +209,53 @@
   "responses": ["Okay"]
 },
 {
-  "tag": "send_whatsapp",
+  "tag": "who_created_you",
   "patterns": [
-    "send whatsapp message",
-    "send message on whatsapp",
-    "text someone on whatsapp"
+    "who created you",
+    "who made you",
+    "who is your creator",
+    "who built you"
   ],
-  "responses": ["Okay"]
+  "responses": ["I was created by my developer"]
 },
+{
+  "tag": "what_can_you_do",
+  "patterns": [
+    "what can you do",
+    "what are your features",
+    "how can you help me",
+    "what are your capabilities"
+  ],
+  "responses": ["I can help with many tasks"]
+},
+{
+  "tag": "how_are_you",
+  "patterns": [
+    "how are you",
+    "are you doing well",
+    "how are you doing"
+  ],
+  "responses": ["I am doing great"]
+},
+{
+  "tag": "tell_joke",
+  "patterns": [
+    "tell me a joke",
+    "make me laugh",
+    "say a joke"
+  ],
+  "responses": ["Here is a joke"]
+},
+{
+  "tag": "introduce_yourself",
+  "patterns": [
+    "introduce yourself",
+    "who are you",
+    "tell me about yourself"
+  ],
+  "responses": ["I am your assistant"]
+},
+
 {
   "tag": "mute_microphone",
   "patterns": [
@@ -248,6 +287,15 @@
   "responses": ["Okay"]
 },
 
+{
+  "tag": "send_whatsapp",
+  "patterns": [
+    "send whatsapp message",
+    "send message on whatsapp",
+    "text someone on whatsapp"
+  ],
+  "responses": ["Okay"]
+},
 
 
       {"tag": "delete_note",

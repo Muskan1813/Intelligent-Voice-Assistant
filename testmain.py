@@ -17,6 +17,7 @@ import volume_control as vc
 import brightness_control as bc
 import whatsapp_commands as wc
 import mic_control as mc
+import smalltalk as st
 
 
 from ctypes import cast, POINTER
@@ -130,6 +131,12 @@ mappings = {
     "tell_day": tell_day,
     "tell_date": tell_date,
     "tell_time": tell_time,
+    
+    "who_created_you": lambda: st.who_created_you(speaker),
+    "what_can_you_do": lambda: st.what_can_you_do(speaker),
+    "how_are_you": lambda: st.how_are_you(speaker),
+    "tell_joke": lambda: st.tell_joke(speaker),
+    "introduce_yourself": lambda: st.introduce_yourself(speaker),
     
     "calculate": lambda: calculator.calculate(speaker, recognizer),
     
