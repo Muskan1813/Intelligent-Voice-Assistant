@@ -16,6 +16,7 @@ import notes
 import volume_control as vc
 import brightness_control as bc
 import whatsapp_commands as wc
+import mic_control as mc
 
 
 from ctypes import cast, POINTER
@@ -158,6 +159,9 @@ mappings = {
     
     "send_whatsapp": lambda: wc.send_whatsapp_message(speaker, recognizer),
     "call_whatsapp": lambda: wc.call_whatsapp_contact(speaker, recognizer),
+    
+    "mute_microphone": lambda: mc.mute_microphone(speaker),
+    "unmute_microphone": lambda: mc.unmute_microphone(speaker),
     
     "exit": quit,
     "file":create_file

@@ -93,7 +93,7 @@ def open_chatgpt(speaker):
 #             audio = recognizer.listen(source, timeout=5)
 #             confirmation = recognizer.recognize_google(audio).lower()
 
-#         if "yes" in confirmation:
+#         if "yes" or "Yes" in confirmation:
 #             speaker.say("Shutting down the system")
 #             speaker.runAndWait()
 #             time.sleep(1)
@@ -103,7 +103,7 @@ def open_chatgpt(speaker):
 #             speaker.runAndWait()
 
 #     except:
-#         speaker.say("Shutdown cancelled")
+#         speaker.say("Shutdown cancelled as no confirmation received")
 #         speaker.runAndWait()
 
 
@@ -117,7 +117,7 @@ def open_chatgpt(speaker):
 #             audio = recognizer.listen(source, timeout=5)
 #             confirmation = recognizer.recognize_google(audio).lower()
 
-#         if "yes" in confirmation:
+#         if "yes" or "Yes" in confirmation:
 #             speaker.say("Restarting the system")
 #             speaker.runAndWait()
 #             time.sleep(1)
@@ -127,5 +127,5 @@ def open_chatgpt(speaker):
 #             speaker.runAndWait()
 
 #     except:
-#         speaker.say("Restart cancelled")
+#         speaker.say("Restart cancelled as no confirmation received")
 #         speaker.runAndWait()

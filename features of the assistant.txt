@@ -1,0 +1,97 @@
+done-------Delete the note function
+
+
+done-------🧮 Calculator
+
+	“What is 23 multiplied by 7?”
+
+	“Calculate square root of 81”
+
+
+done-------🕒 Time & Date
+
+	“What’s the time?”
+
+	“What’s today’s date?”
+
+	“What day is it?”
+
+
+🌦️ Weather Info
+
+Current weather
+
+Temperature
+
+Humidity
+
+“Will it rain today?”
+
+
+📖 Dictionary
+
+“Meaning of overfitting”
+
+“Synonym of intelligent”
+
+
+🔍 Web Search / Q&A
+
+“Who is Alan Turing?”
+
+“Explain machine learning”
+
+“Capital of Germany”
+
+
+
+done------💻 System Commands
+
+		Open Chrome / VS Code
+
+		Open YouTube
+
+		Open Spotify
+
+Shutdown / Restart (with confirmation)
+
+
+done--------🔊 Volume & Brightness Control
+
+		Increase / decrease volume
+
+		Mute system
+
+		Adjust brightness
+
+🎙️ 6️⃣ Microphone Mute Control (Meet-Friendly)
+
+“Mute microphone”
+
+“Unmute mic”
+
+Very practical for meetings.
+
+
+done-------- WhatsApp integration
+		can send messages to saved contacts
+		can send messages to unsaved contacts
+		for call, open contact in web
+
+
+🧠 7️⃣ Smart Small Talk
+
+“Who created you?”
+
+“Tell me a joke”
+
+“What can you do?”
+
+“How are you?”
+
+
+
+
+
+
+

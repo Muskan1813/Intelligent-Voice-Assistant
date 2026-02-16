@@ -218,6 +218,27 @@
   "responses": ["Okay"]
 },
 {
+  "tag": "mute_microphone",
+  "patterns": [
+    "mute microphone",
+    "mute mic",
+    "turn off microphone",
+    "disable mic"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "unmute_microphone",
+  "patterns": [
+    "unmute microphone",
+    "turn on mic",
+    "enable microphone",
+    "unmute mic"
+  ],
+  "responses": ["Okay"]
+},
+
+{
   "tag": "call_whatsapp",
   "patterns": [
     "call on whatsapp",
