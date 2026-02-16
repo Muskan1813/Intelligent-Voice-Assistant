@@ -1,7 +1,21 @@
 import speech_recognition
 import screen_brightness_control as sbc
 
+    
+def increase_brightness(speaker):
+    current = sbc.get_brightness()[0]
+    sbc.set_brightness(min(current + 10, 100))
 
+    speaker.say("Brightness increased")
+    speaker.runAndWait()
+
+def decrease_brightness(speaker):
+    current = sbc.get_brightness()[0]
+    sbc.set_brightness(max(current - 10, 0))
+
+    speaker.say("Brightness decreased")
+    speaker.runAndWait()
+    
 def set_brightness(speaker, recognizer):
     speaker.say("Tell me the brightness level between zero and one hundred")
     speaker.runAndWait()
