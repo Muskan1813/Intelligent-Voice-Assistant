@@ -79,7 +79,7 @@ done-------- WhatsApp integration
 		for call, open contact in web
 
 
-🧠 7️⃣ Smart Small Talk
+done-------🧠 7️⃣ Smart Small Talk
 
 		“Who created you?”
 
@@ -89,7 +89,7 @@ done-------- WhatsApp integration
 
 		“How are you?”
 
-📸 Screenshot Command
+done-------📸 Screenshot Command
 
 		“Take screenshot”
 

@@ -1,7 +1,7 @@
 {"intents":
 [
       {"tag": "greeting",
-        "patterns": ["Hey", "Hello", "What's up?", "How is it going?", "Hi", "Good day"],
+        "patterns": ["Hey", "Hello", "What's up?", "Hi", "Good day"],
         "responses": ["Hello Sir!", "Hello, what can I do for you?"]},
       {"tag": "create_note",
         "patterns": ["Please create a new note", "New note", "Create a note", "I want to create a note"],
@@ -47,7 +47,7 @@
   "tag": "calculate",
   "patterns": [
     "calculate",
-    "do a calculation",
+    "do calculation",
     "open calculator",
     "math calculation"
   ],
@@ -228,6 +228,36 @@
   ],
   "responses": ["I can help with many tasks"]
 },
+{
+  "tag": "take_screenshot_named",
+  "patterns": [
+    "take screenshot with name",
+    "save screenshot with name",
+    "name the screenshot",
+    "capture screen with name",
+    "take screenshot named",
+    "call screenshot",
+    "take screenshot and name it"
+  ],
+  "responses": ["Okay"]
+},
+{
+  "tag": "take_screenshot",
+  "patterns": [
+    "take screenshot",
+    "take a screenshot",
+    "capture screen",
+    "capture my screen",
+    "take screen shot",
+    "take the screenshot",
+    "screenshot now",
+    "take screenshot now",
+    "capture display",
+    "screen capture"
+  ],
+  "responses": ["Taking screenshot"]
+},
+
 {
   "tag": "how_are_you",
   "patterns": [

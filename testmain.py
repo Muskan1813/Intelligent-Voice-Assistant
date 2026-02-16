@@ -18,6 +18,7 @@ import brightness_control as bc
 import whatsapp_commands as wc
 import mic_control as mc
 import smalltalk as st
+import screenshot_commands as sc
 
 
 from ctypes import cast, POINTER
@@ -163,6 +164,9 @@ mappings = {
     "open_jupyter": lambda: syscmd.open_jupyter(speaker),
     "open_colab": lambda: syscmd.open_colab(speaker),
     "open_chatgpt": lambda: syscmd.open_chatgpt(speaker), 
+    
+    "take_screenshot": lambda: sc.take_screenshot(speaker),
+    "take_screenshot_named": lambda: sc.take_screenshot_with_name(speaker, recognizer),
     
     "send_whatsapp": lambda: wc.send_whatsapp_message(speaker, recognizer),
     "call_whatsapp": lambda: wc.call_whatsapp_contact(speaker, recognizer),

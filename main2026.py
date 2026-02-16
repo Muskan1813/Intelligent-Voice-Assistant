@@ -17,6 +17,7 @@ import brightness_control as bc
 import whatsapp_commands as wc
 import mic_control as mc
 import smalltalk as st
+import screenshot_commands as sc
 
 
 
@@ -95,7 +96,9 @@ def run_assistant():
                 print(f"Recognized: {message}")  # Debug info
                 
                 if "hello" in message:
-                    label.config(fg = "red")
+                    # label.config(fg = "red")
+                    root.after(0, lambda: label.config(fg="red"))
+
                     speaker.say("I am listening")
                     speaker.runAndWait()
                     
@@ -124,7 +127,9 @@ def run_assistant():
         except speech_recognition.UnknownValueError:
             print("Could not understand the audio.")   #debug info
             
-            label.config(fg="black")
+            # label.config(fg="black")
+            root.after(0, lambda: label.config(fg="black"))
+
             recognizer = speech_recognition.Recognizer() 
   
 mappings = {
@@ -169,6 +174,9 @@ mappings = {
     "open_jupyter": lambda: syscmd.open_jupyter(speaker),
     "open_colab": lambda: syscmd.open_colab(speaker),
     "open_chatgpt": lambda: syscmd.open_chatgpt(speaker), 
+    
+    "take_screenshot": lambda: sc.take_screenshot(speaker),
+    "take_screenshot_named": lambda: sc.take_screenshot_with_name(speaker, recognizer),
     
     "send_whatsapp": lambda: wc.send_whatsapp_message(speaker, recognizer),
     "call_whatsapp": lambda: wc.call_whatsapp_contact(speaker, recognizer),
