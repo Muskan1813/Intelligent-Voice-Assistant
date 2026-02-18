@@ -166,8 +166,8 @@ mappings = {
     "open_youtube": lambda: syscmd.open_youtube(speaker),
     "open_spotify": lambda: syscmd.open_spotify(speaker),
 
-    # "shutdown_system": lambda: syscmd.shutdown_system(speaker, recognizer),
-    # "restart_system": lambda: syscmd.restart_system(speaker, recognizer),
+    "shutdown_system": lambda: syscmd.shutdown_system(speaker, recognizer),
+    "restart_system": lambda: syscmd.restart_system(speaker, recognizer),
      
     "open_word": lambda: syscmd.open_word(speaker),
     "open_notepad": lambda: syscmd.open_notepad(speaker),

@@ -6,7 +6,6 @@ import sys
 import threading
 import tkinter as tk
 from datetime import datetime
-
 import pyautogui
 
 # self made modules below
@@ -19,6 +18,9 @@ import whatsapp_commands as wc
 import mic_control as mc
 import smalltalk as st
 import screenshot_commands as sc
+
+
+
 
 
 from ctypes import cast, POINTER
@@ -94,7 +96,9 @@ def run_assistant():
                 print(f"Recognized: {message}")  # Debug info
                 
                 if "hello" in message:
-                    label.config(fg = "red")
+                    # label.config(fg = "red")
+                    root.after(0, lambda: label.config(fg="red"))
+                    
                     speaker.say("I am listening")
                     speaker.runAndWait()
                     
@@ -112,14 +116,17 @@ def run_assistant():
                         speaker.say(response)
                         speaker.runAndWait()
                         
-                    label.config(fg="black")   
+                    # label.config(fg="black")  
+                    root.after(0, lambda: label.config(fg="black")) 
 
             
 
         except speech_recognition.UnknownValueError:
             print("Could not understand the audio.")   #debug info
             
-            label.config(fg="black")
+            # label.config(fg="black")
+            root.after(0, lambda: label.config(fg="black"))
+            
             recognizer = speech_recognition.Recognizer() 
   
 mappings = {
@@ -156,8 +163,8 @@ mappings = {
     "open_youtube": lambda: syscmd.open_youtube(speaker),
     "open_spotify": lambda: syscmd.open_spotify(speaker),
     
-    # "shutdown_system": lambda: syscmd.shutdown_system(speaker, recognizer),
-    # "restart_system": lambda: syscmd.restart_system(speaker, recognizer),
+    "shutdown_system": lambda: syscmd.shutdown_system(speaker, recognizer),
+    "restart_system": lambda: syscmd.restart_system(speaker, recognizer),
      
     "open_word": lambda: syscmd.open_word(speaker),
     "open_notepad": lambda: syscmd.open_notepad(speaker),
