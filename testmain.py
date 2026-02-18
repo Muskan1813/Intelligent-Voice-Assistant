@@ -1,3 +1,4 @@
+# run this to check the assistant
 #intelligent assistant with wake up word
 from neuralintents import GenericAssistant
 import speech_recognition
@@ -18,6 +19,7 @@ import whatsapp_commands as wc
 import mic_control as mc
 import smalltalk as st
 import screenshot_commands as sc
+import weather_commands as wc
 
 
 
@@ -180,6 +182,11 @@ mappings = {
     
     "mute_microphone": lambda: mc.mute_microphone(speaker),
     "unmute_microphone": lambda: mc.unmute_microphone(speaker),
+    
+    "current_weather": lambda: wc.current_weather(speaker, recognizer),
+    "temperature": lambda: wc.temperature(speaker, recognizer),
+    "humidity": lambda: wc.humidity(speaker, recognizer),
+    "rain_check": lambda: wc.will_it_rain(speaker, recognizer),
     
     "exit": quit,
     "file":create_file

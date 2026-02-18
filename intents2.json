@@ -326,6 +326,45 @@
   ],
   "responses": ["Okay"]
 },
+{
+  "tag": "current_weather",
+  "patterns": [
+    "what is the weather",
+    "current weather",
+    "how is the weather",
+    "weather today"
+  ],
+  "responses": ["Checking weather"]
+},
+{
+  "tag": "temperature",
+  "patterns": [
+    "what is the temperature",
+    "temperature today",
+    "current temperature"
+  ],
+  "responses": ["Checking temperature"]
+},
+{
+  "tag": "humidity",
+  "patterns": [
+    "what is the humidity",
+    "humidity today",
+    "current humidity"
+  ],
+  "responses": ["Checking humidity"]
+},
+{
+  "tag": "rain_check",
+  "patterns": [
+    "will it rain",
+    "is it going to rain",
+    "rain forecast",
+    "will it rain today"
+  ],
+  "responses": ["Checking rain forecast"]
+},
+
 
 
       {"tag": "delete_note",
